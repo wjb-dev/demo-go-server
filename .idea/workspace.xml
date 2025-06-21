@@ -4,11 +4,38 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92e741aa-8c22-4e89-91cd-6104a3bc66f5" name="Changes" comment="" />
+    <list default="true" id="92e741aa-8c22-4e89-91cd-6104a3bc66f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cmd/demo-go-server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/git.ignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runConfigurations/go/Golang.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile.go" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/v1/service.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/v1/service_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/go/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/go/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/go/test_stub.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/go/test_stub_test.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///opt/homebrew/opt/go/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -22,39 +49,68 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Makefile Target.build.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.docker-build.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.docker-run.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.generate.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/will/Projects/demo-go-server&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.GoBuild_demo-go-server.executor": "Run",
+    "Go Build.Golang.executor": "Run",
+    "Makefile Target.build.executor": "Run",
+    "Makefile Target.clean-proto.executor": "Run",
+    "Makefile Target.docker-build.executor": "Run",
+    "Makefile Target.docker-run.executor": "Run",
+    "Makefile Target.generate-proto.executor": "Run",
+    "Makefile Target.generate.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/will/Projects/demo-go-server",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/go" />
     </key>
   </component>
-  <component name="RunManager" selected="Makefile Target.generate">
+  <component name="RunManager" selected="Go Build.Golang">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="demo-go-server" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/wjb-dev/demo-go-server" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="GoRemoteDebugConfigurationType" factoryName="Go Remote" nameIsGenerated="true">
+      <option name="disconnectOption" value="ASK" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="demo-go-server" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="build" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="docker-build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="docker-build" workingDirectory="" arguments="">
+    <configuration name="clean-proto" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="clean-proto" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -65,18 +121,33 @@
       </makefile>
       <method v="2" />
     </configuration>
+    <configuration name="generate-proto" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="generate-proto" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <configuration name="generate" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="generate" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.Golang" />
+      <item itemvalue="Go Remote.Unnamed" />
+      <item itemvalue="Makefile Target.generate-proto" />
+      <item itemvalue="Makefile Target.build" />
+      <item itemvalue="Makefile Target.clean-proto" />
+      <item itemvalue="Makefile Target.docker-run" />
+      <item itemvalue="Makefile Target.generate" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile Target.clean-proto" />
         <item itemvalue="Makefile Target.generate" />
         <item itemvalue="Makefile Target.build" />
         <item itemvalue="Makefile Target.docker-run" />
-        <item itemvalue="Makefile Target.docker-build" />
       </list>
     </recent_temporary>
   </component>

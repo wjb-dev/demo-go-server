@@ -1,0 +1,4 @@
+# Generated files
+*.pb.go
+*.pb.cc
+*.pb.h

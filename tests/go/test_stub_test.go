@@ -2,22 +2,21 @@ package go_test
 
 import (
 	"context"
+	v2 "github.com/wjb-dev/demo-go-server/pkg/proto/v1"
 	"testing"
-
-	v1 "github.com/wjb-dev/demo-go-server/proto/v1"
 )
 
 type stubServer struct {
-	v1.UnimplementedEchoServiceServer
+	v2.UnimplementedEchoServiceServer
 }
 
-func (s *stubServer) Echo(ctx context.Context, req *v1.EchoRequest) (*v1.EchoResponse, error) {
-	return &v1.EchoResponse{Message: req.Message}, nil
+func (s *stubServer) Echo(ctx context.Context, req *v2.EchoRequest) (*v2.EchoResponse, error) {
+	return &v2.EchoResponse{Message: req.Message}, nil
 }
 
 func TestEcho(t *testing.T) {
 	srv := &stubServer{}
-	req := &v1.EchoRequest{Message: "hello"}
+	req := &v2.EchoRequest{Message: "hello"}
 	resp, err := srv.Echo(context.Background(), req)
 	if err != nil {
 		t.Fatalf("Echo returned error: %v", err)

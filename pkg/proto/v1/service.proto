@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package v1;
 
-option go_package = "wjb-dev/demo-go-server/proto/v1;v1";
+option go_package = "wjb-dev/demo-go-server/pkg/proto/v1;v1";
 
 
 service EchoService {

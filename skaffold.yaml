@@ -36,5 +36,5 @@ profiles:
               - resourceType: service
                 resourceName: demo-go-server
 
-port: 8000
+port: 50051
 
