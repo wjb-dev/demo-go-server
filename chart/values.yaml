@@ -1,0 +1,15 @@
+# Default values for demo-go-server.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  # repository will be built by your Makefile/Dockerfile
+  repository: "demo-go-server-go"
+  tag: "local"
+  pullPolicy: IfNotPresent
+
+service:
+  # gRPC for C++ (50051), HTTP services for others (8000)
+  port: 8000

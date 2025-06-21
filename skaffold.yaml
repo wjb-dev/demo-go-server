@@ -1,0 +1,40 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: demo-go-server
+
+build:
+  artifacts:
+  image: demo-go-server-go
+  context: .
+  docker:
+    dockerfile: Dockerfile.go
+
+deploy:
+  helm:
+    releases:
+      - name: demo-go-server
+        chartPath: chart
+        # you can override any values here if you like
+        values:
+image.repository: "demo-go-server-go"
+image.tag: "local"
+
+profiles:
+  - name: dev
+    activation:
+      - kubeContext: kind-*
+    build:
+      local:
+        push: false
+    deploy:
+      helm:
+        releases:
+          - name: demo-go-server
+            # in dev we’ll do a port-forward so you can hit your service locally
+            portForward:
+              - resourceType: service
+                resourceName: demo-go-server
+
+port: 8000
+

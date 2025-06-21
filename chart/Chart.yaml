@@ -1,0 +1,6 @@
+apiVersion: v2
+name: demo-go-server
+description: A cross-language gRPC microservice.
+type: application
+version: 0.1.0
+appVersion: "local"
