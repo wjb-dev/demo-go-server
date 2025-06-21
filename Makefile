@@ -3,7 +3,7 @@
 # Project Configuration
 LANG                   := go
 PROJECT                := demo-go-server
-GO_TESTDIR             := tests/go
+GO_TESTDIR             := test/integration
 BIN_DIR                := bin
 PROTO_DIR              := pkg/proto/v1
 PLATFORM               := $(shell uname -m)

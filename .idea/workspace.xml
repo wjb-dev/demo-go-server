@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92e741aa-8c22-4e89-91cd-6104a3bc66f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cmd/demo-go-server/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git.ignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runConfigurations/go/Golang.run.xml" afterDir="false" />
+    <list default="true" id="92e741aa-8c22-4e89-91cd-6104a3bc66f5" name="Changes" comment="WIP">
+      <change afterPath="$PROJECT_DIR$/configs/dev.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/prod.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/handler/echo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/server/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/integration/echo_integration_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile.go" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/v1/service.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/v1/service_grpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/go/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/go/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/go/test_stub.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/go/test_stub_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/demo-go-server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/demo-go-server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/proto/v1/service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/proto/v1/service.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/cpp/test_stub.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/go/test_stub_test.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Burkswill2&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wjb-dev/demo-go-server.git&quot;,
+    &quot;accountId&quot;: &quot;c371285c-6d0d-43e9-9cf0-a57f687a13b0&quot;
+  }
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -49,33 +59,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go Build.GoBuild_demo-go-server.executor": "Run",
-    "Go Build.Golang.executor": "Run",
-    "Makefile Target.build.executor": "Run",
-    "Makefile Target.clean-proto.executor": "Run",
-    "Makefile Target.docker-build.executor": "Run",
-    "Makefile Target.docker-run.executor": "Run",
-    "Makefile Target.generate-proto.executor": "Run",
-    "Makefile Target.generate.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/will/Projects/demo-go-server",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Build.GoBuild_demo-go-server.executor&quot;: &quot;Run&quot;,
+    &quot;Go Build.Golang.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.build.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.clean-proto.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.docker-build.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.docker-run.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.generate-proto.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.generate.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/will/Projects/demo-go-server&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pkg" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/go" />
     </key>
@@ -171,6 +182,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

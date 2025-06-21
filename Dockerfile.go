@@ -13,13 +13,12 @@ ENV PATH="${PATH}:$(go env GOPATH)/bin"
 
 WORKDIR /cmd
 
-# Copy go.mod & go.sum, download deps
+# Copy go.mod and go.sum first to leverage Docker cache
 COPY go.mod go.sum ./
 RUN go mod download
 
-# Copy in your .proto and Go sources
-COPY proto/ proto/
-COPY cmd/demo-go-server/ cmd/demo-go-server/
+# Copy all source code
+COPY . .
 
 # Generate Go code from your proto
 RUN protoc \
