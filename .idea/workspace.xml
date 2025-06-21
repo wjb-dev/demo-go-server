@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92e741aa-8c22-4e89-91cd-6104a3bc66f5" name="Changes" comment="WIP">
-      <change afterPath="$PROJECT_DIR$/configs/dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/prod.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/handler/echo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/server/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/integration/echo_integration_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile.go" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/demo-go-server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/demo-go-server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/proto/v1/service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/proto/v1/service.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/cpp/test_stub.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/go/test_stub_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runConfigurations/go/Golang.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/runConfigurations/go/Golang.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/echo_integration_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/echo_integration_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

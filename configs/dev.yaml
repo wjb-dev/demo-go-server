@@ -1,0 +1,54 @@
+# configs/dev.yaml
+environment: "development"
+
+server:
+  host: "0.0.0.0"
+  port: 50051
+  enable_reflection: true
+  max_recv_msg_size: 4194304  # 4 MiB, adjust if needed
+  max_send_msg_size: 4194304
+
+tls:
+  enabled: false
+  cert_file: ""
+  key_file: ""
+  client_ca_file: ""
+
+logging:
+  level: "debug"
+  format: "text"  # easier in dev
+  output: "stdout"
+
+metrics:
+  enabled: true
+  host: "0.0.0.0"
+  port: 9090
+  path: "/metrics"
+
+tracing:
+  enabled: false
+  endpoint: ""
+  service_name: "demo-go-server"
+
+database:
+  url: "postgres://user:pass@localhost:5432/demo_db?sslmode=disable"
+  max_open_conns: 10
+  max_idle_conns: 5
+  conn_max_lifetime: "1h"
+
+cache:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+
+external_services:
+  user_service_url: "http://localhost:8080"
+  payment_service_url: "http://localhost:8081"
+
+timeouts:
+  default_rpc_timeout: "5s"
+  handler_timeout: "10s"
+
+feature_flags:
+  use_new_algorithm: false

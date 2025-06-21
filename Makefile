@@ -70,13 +70,13 @@ generate-proto: install
 		--go-grpc_out=paths=source_relative:$(PROTO_DIR) \
 		$(PROTO_DIR)/service.proto
 
-test:
+test: generate-proto
 	@echo "✅ Running Go tests…"
 	cd $(GO_TESTDIR) && go test ./...
 
 build:
 	@echo "🔨 Building Go Docker image…"
-	docker build -f Dockerfile.go -t $(PROJECT)-go:local .
+	docker build -f Dockerfile.builder -t $(PROJECT)-go:local .
 
 run: build
 	@echo "🚀 Running Go Docker container…"

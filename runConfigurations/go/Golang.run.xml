@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Golang" type="GoApplicationRunConfiguration" factoryName="Go Application">
     <module name="demo-go-server" />
-    <working_directory value="$PROJECT_DIR$/cmd/demo-go-server" />
+    <working_directory value="$PROJECT_DIR$" />
     <kind value="PACKAGE" />
     <package value="github.com/wjb-dev/demo-go-server/cmd/demo-go-server" />
     <directory value="$PROJECT_DIR$" />
